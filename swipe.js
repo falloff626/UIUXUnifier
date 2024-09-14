@@ -1,0 +1,1 @@
+const pipe = (...fns) => (x) => fns.reduce((v, f) => f(v), x); const add10 = (x) => x + 10; const mul2 = (x) => x * 2; const add10ThenMul2 = pipe(add10, mul2); console.log(add10ThenMul2(5));
